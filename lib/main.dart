@@ -6,17 +6,14 @@ import 'package:hong/pages/selectedcategorypage.dart';
 import 'package:hong/pages/splashpage.dart';
 import 'package:hong/pages/welcomepage.dart';
 
-
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: detailsPage(
-      SubCategory: Utils.getMockedCategories()[0].subCategories![0],
-    )
-    //SplashPage(duration: 3, goToPage: WelcomePage())
-  ));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashPage(
+        duration: 1,
+        goToPage: WelcomePage(),
+      ),
+    ),
+  );
 }
-
-
-
-
