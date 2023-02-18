@@ -28,9 +28,24 @@ class DetailsPageState extends State<DetailsPage> {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage('assets/imgs/' +
-                                  widget.subCategory.imgName! +
+                                  widget.subCategory.imgName +
                                   '.jpg'),
-                              fit: BoxFit.cover)),
+                              fit: BoxFit.cover)
+                              ),
+                    ),
+                    Positioned.fill(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.black.withOpacity(0.6),
+                              Colors.transparent
+                            ]
+                          )
+                        )
+                      )
                     )
                   ],
                 )

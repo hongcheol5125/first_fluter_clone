@@ -21,10 +21,10 @@ class SelectedCategoryPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CategoryIcon(
-                    color: selectedCategory.color!,
-                    iconName: selectedCategory.icon!),
+                    color: selectedCategory.color,
+                    iconName: selectedCategory.icon),
                 SizedBox(width: 10),
-                Text(selectedCategory.name!,
+                Text(selectedCategory.name,
                     style:
                         TextStyle(color: selectedCategory.color, fontSize: 20))
               ],
@@ -40,10 +40,12 @@ class SelectedCategoryPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => DetailsPage(
-                                      subCategory: this
-                                          .selectedCategory
-                                          .subCategories![index])));
+                                  builder: (context) =>
+                                  DetailsPage(
+                                    subCategory: selectedCategory.subCategories![index]
+                                   )
+                                  )
+                                );
                         },
                         child: Container(
                           child: Column(
@@ -52,7 +54,7 @@ class SelectedCategoryPage extends StatelessWidget {
                                 child: Image.asset(
                                     'assets/imgs/' +
                                         selectedCategory
-                                            .subCategories![index].imgName! +
+                                            .subCategories![index].imgName +
                                         '.jpg',
                                     fit: BoxFit.cover,
                                     width: 100,
@@ -63,7 +65,7 @@ class SelectedCategoryPage extends StatelessWidget {
                                   this
                                       .selectedCategory
                                       .subCategories![index]
-                                      .name!,
+                                      .name,
                                   style: TextStyle(
                                       color: this.selectedCategory.color))
                             ],

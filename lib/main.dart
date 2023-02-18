@@ -9,11 +9,12 @@ import 'package:hong/pages/welcomepage.dart';
 void main() {
   runApp(
     MaterialApp(
+      theme: ThemeData(fontFamily: 'Raleway'),
       debugShowCheckedModeBanner: false,
-      home: SplashPage(
-        duration: 1,
-        goToPage: WelcomePage(),
-      ),
+      home: DetailsPage(
+        subCategory: Utils.getMockedCategories()[0].subCategories![0],
+      )
+      //SplashPage(duration: 1,goToPage: WelcomePage(),),
     ),
   );
 }

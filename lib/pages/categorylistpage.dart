@@ -10,6 +10,7 @@ import 'package:hong/widgets/iconfont.dart';
 
 class CategoryListPage extends StatelessWidget {
   List<Category> categories = Utils.getMockedCategories();
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
