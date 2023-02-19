@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hong/helpers/appcolors.dart';
 import 'package:hong/helpers/iconhelper.dart';
 import 'package:hong/models/category.dart';
+import 'package:hong/pages/detailspage.dart';
 import 'package:hong/widgets/categoryicon.dart';
 import 'package:hong/widgets/iconfont.dart';
 import 'package:hong/widgets/mainappbar.dart';
@@ -76,6 +77,6 @@ class SelectedCategoryPage extends StatelessWidget {
           ],
         )));
   }
-
-  DetailsPage({required Category subCategory}) {}
 }
+
+//   DetailsPage({required Category subCategory}) {}

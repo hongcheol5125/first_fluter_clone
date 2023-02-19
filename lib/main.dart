@@ -14,7 +14,7 @@ void main() {
       home: DetailsPage(
         subCategory: Utils.getMockedCategories()[0].subCategories![0],
       )
-      //SplashPage(duration: 1,goToPage: WelcomePage(),),
+      // SplashPage(duration: 1,goToPage: WelcomePage(),),
     ),
   );
 }
